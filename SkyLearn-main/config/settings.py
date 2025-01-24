@@ -107,23 +107,23 @@ WSGI_APPLICATION = "config.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/2.2/ref/settings/#databases
 
-DATABASES = {
-    "default": {
-        "ENGINE": "django.db.backends.sqlite3",
-        "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
-    }
-}
-
 # DATABASES = {
 #     "default": {
-#         'ENGINE': 'django.db.backends.mysql',
-#         'NAME': config('DB_NAME', default="skylearn"),
-#         'USER': config('DB_USERNAME', default="root"),
-#         'PASSWORD': config('DB_PASSWORD', default="root"),
-#         'HOST': config('DB_HOST', default="localhost"),
-#         'PORT': config('DB_PORT', default="5432"),
+#         "ENGINE": "django.db.backends.sqlite3",
+#         "NAME": os.path.join(BASE_DIR, "db.sqlite3"),
 #     }
 # }
+
+DATABASES = {
+    "default": {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': config('DB_NAME', default="skylearn"),
+        'USER': config('DB_USERNAME', default="root"),
+        'PASSWORD': config('DB_PASSWORD', default="root"),
+        'HOST': config('DB_HOST', default="localhost"),
+        'PORT': config('DB_PORT', default="5432"),
+    }
+}
 
 # https://docs.djangoproject.com/en/stable/ref/settings/#std:setting-DEFAULT_AUTO_FIELD
 DEFAULT_AUTO_FIELD = "django.db.models.BigAutoField"
